@@ -49,7 +49,7 @@ document.getElementById("Hscroll").style.whiteSpace="nowrap";
            <div id="scroll" class="col s2 card">
                 <ul class="collection">
                         {% for each in foldernames %}
-                        <li class="collection-item section scrollspy" ><a  href="/doceval/{{each.foldername}}"><div>{{each.foldername}}</div></a><div class="progress"><div class="determinate" style="width:70%"></div></div></li>
+                        <li class="collection-item section scrollspy" ><a  href="/doceval/{{each.foldername}}"><div>Folder {{each.foldername}}</div></a><div class="progress"><div class="determinate" style="width:70%"></div></div></li>
                         {% endfor %}
                          </ul>    
            </div>
@@ -71,6 +71,7 @@ document.getElementById("Hscroll").style.whiteSpace="nowrap";
                             <img id="img1" src="/media/{{foldername}}/mask/{{fileno}}.png" alt="Hist" width="400" height="400" style="margin:0 auto">
                            
                     </div> 
+                    <h1><p id="feedback" style="visibility:hidden">Submitted</p></h1>
                     <div class="col s12" >
                                 <h3><p>If it is correct tick the checkbox else leave it unmarked</p></h3>
                                   <p class="center-align" style="padding:10px" >
@@ -80,7 +81,6 @@ document.getElementById("Hscroll").style.whiteSpace="nowrap";
                                     </label>
                                     <button type="button" class="btn waves-effect waves-light" id="done"> <i class="material-icons right">send</i> Done</button>
                                   </p>
-                                <h1><p id="feedback" style="visibility:hidden">Submitted</p></h1>
                             <div>
                                     <!-- <input " type="checkbox" class="filled-in" method="post" action="">Correct</input> -->
                                     
