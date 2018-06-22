@@ -35,7 +35,7 @@ $(document).ready(function(){
     <div id="scroll" class="col s2 card">
           <ul class="collection">
          {% for each in foldernames %}
-         <li class="collection-item section scrollspy" ><a  href="/doceval/{{each.foldername}}"><div>{{each.foldername}}</div></a><div class="progress"><div class="determinate" style="width:70%"></div></div></li>
+         <li class="collection-item section scrollspy" ><a  href="/doceval/{{each.foldername}}"><div>Folder {{each.foldername}}</div></a><div class="progress"><div class="determinate" style="width:0%"></div></div></li>
          {% endfor %}
           </ul>    
   </div>  

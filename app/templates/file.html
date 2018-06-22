@@ -36,19 +36,20 @@
 </nav>
                    
 <div class="row">
-  <div id="scroll" class="col s2 card progress">
-      <ul class="collection">
-          {% for each in foldernames %}
-          <li class="collection-item section scrollspy" ><a  href="/doceval/{{each.foldername}}"><div>{{each.foldername}}</div></a><div class="progress"><div class="determinate" style="width:70%"></div></div></li>
-          {% endfor %}
-           </ul>    
-  </div>
+    <div id="scroll" class="col s2 card">
+        <ul class="collection">
+       {% for each in foldernames %}
+       <li class="collection-item section scrollspy" ><a  href="/doceval/{{each.foldername}}"><div>Folder {{each.foldername}}</div></a><div class="progress"><div class="determinate" style="width:0%"></div></div></li>
+       {% endfor %}
+        </ul>    
+    </div>  
   <div class="col s10">
-      <div id="Hscroll" class="filename card"  style="padding:1em;overflow-x: scroll ">
-          {% for each in filenames %}
-          <a  style="border: 1px solid #8d928c;padding: 5px;margin: 5px;background:rgb(38, 166, 154);color:white" href="/doceval/{{each.foldername}}/{{each.filename}}">{{each.foldername}}_{{each.filename}}</a>
-          {% endfor %}
-      </div>
+    <div id="Hscroll" class="filename card"  style="padding:1em;overflow-x: scroll ">
+        {% for each in filenames %}
+        <a  style="border: 1px solid #8c9092;padding: 5px;margin: 5px;background:{% if each.iscomplete in "true" %}rgb(38, 166, 154){% else %}rgb(255, 0, 0) {% endif %};color:white" href="/doceval/{{each.foldername}}/{{each.filename}}">{{each.foldername}}_{{each.filename}}</a>
+        {% endfor %}
+    </div>
+
   </div>
 </div>
 
